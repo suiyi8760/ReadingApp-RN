@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-import ReadMain from './app/readMain/readMain'
+import ReadMain from './app/readMain/launchPage'
 
 export default class Reading extends Component {
   render() {
