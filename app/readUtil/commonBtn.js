@@ -13,7 +13,7 @@ export default class  extends Component {
 
         static propTypes = {
             btnViewStyle: View.propTypes.style,
-            titleStyle: View.propTypes.style,
+            titleStyle: Text.propTypes.style,
             title: PropTypes.string,
             clickBtn: PropTypes.func,
             renderImg: PropTypes.func

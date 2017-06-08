@@ -39,7 +39,7 @@ export default class ReadMain extends Component {
                 staticIcon: 'icon_tabbar_homepage',
                 selectedIcon: 'icon_tabbar_homepage_selected',
                 selectedTab: 'reading',
-                component: <ReadReading />
+                component: <ReadReading {...this.props} />
             })}
             {/*公园*/}
             {this._renderTabItem({
@@ -47,7 +47,7 @@ export default class ReadMain extends Component {
                 staticIcon: 'icon_tabbar_merchant_normal',
                 selectedIcon: 'icon_tabbar_merchant_selected',
                 selectedTab: 'park',
-                component: <ReadPark />
+                component: <ReadPark {...this.props} />
             })}
             {/*发现*/}
             {this._renderTabItem({
@@ -55,7 +55,7 @@ export default class ReadMain extends Component {
                 staticIcon: 'icon_tabbar_nearby_normal',
                 selectedIcon: 'icon_tabbar_nearby_selected',
                 selectedTab: 'find',
-                component: <ReadFind />
+                component: <ReadFind {...this.props} />
             })}
             {/*我的*/}
             {this._renderTabItem({
@@ -64,7 +64,7 @@ export default class ReadMain extends Component {
                 selectedIcon: 'icon_tabbar_mine_selected',
                 selectedTab: 'mine',
                 badgeNum: '20',
-                component: <ReadMine />
+                component: <ReadMine {...this.props} />
             })}
         </TabNavigator>
     }

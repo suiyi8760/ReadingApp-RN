@@ -11,12 +11,22 @@ import {
   View
 } from 'react-native';
 
+import { Navigator } from 'react-native-deprecated-custom-components'
 import ReadMain from './app/readMain/launchPage'
 
 export default class Reading extends Component {
   render() {
     return (
-      <ReadMain />
+      <Navigator
+          initialRoute={{name:'ReadMain',component:ReadMain}}
+          configureScene={(route)=>{
+              return Navigator.SceneConfigs.PushFromRight;
+          }}
+          renderScene={(route,navigator)=>{
+              let Component = route.component;
+              return <Component {...route.passProps} navigator={navigator}/>
+          }}
+      />
     );
   }
 }

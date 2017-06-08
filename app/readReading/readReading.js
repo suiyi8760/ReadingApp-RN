@@ -4,13 +4,19 @@ import {
   Text,
   Image,
   View,
+    TouchableOpacity
 } from 'react-native';
 
+import Test from './test'
 export default class extends Component {
   render() {
     return (
         <View style={styles.container}>
-          <Text>Reading</Text>
+          <TouchableOpacity
+              onPress={()=>this.props.navigator.replace({
+                  component:Test
+              })}
+          ><Text>Reading</Text></TouchableOpacity>
         </View>
     );
   }
